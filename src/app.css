@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  body{
+    @apply text-white;
+  }
+
+  h1 {
+    @apply text-2xl;
+    @apply font-medium;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+  
+  a {
+    @apply opacity-100 transition ease-in-out hover:opacity-75;
+  }
+}
