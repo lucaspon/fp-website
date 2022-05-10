@@ -4,42 +4,41 @@
   import { onMount } from "svelte";
 
   export let assets;
-  let excludedNFTs = ["fingerprints.eth", "Gutter Punks Flyer - Meebits"];
+  let excludedNFTs = [
+    "fingerprints.eth",
+    "Gutter Punks Flyer - Meebits",
+    "CRAYON CLUB X BAYC",
+    "Meebits",
+    "My Overall World",
+    "Spinal Foxes",
+    "SUPERPLASTIC: Cryptojankyz",
+    "YELLOW PILLZ",
+    "Nifty Island Totems",
+    "The Jims",
+    "Voxels (formerly Cryptovoxels)",
+    "Temple",
+    "Gallery Premium Membership Cards",
+  ];
 
-  function shuffle(array) {
-    let currentIndex = array.length,
-      randomIndex;
-
-    while (currentIndex != 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-    }
-
-    return array;
-  }
-  
   function compare(a, b) {
-    if (a.collection['name'] < b.collection['name']) {
+    if (a.collection["name"] < b.collection["name"]) {
       return -1;
     }
-    if (a.collection['name'] > b.collection['name']) {
+    if (a.collection["name"] > b.collection["name"]) {
       return 1;
     }
-    
-    if (a['name'] < b['name']) {
+
+    if (a["name"] < b["name"]) {
       return -1;
     }
-    if (a['name'] > b['name']) {
+    if (a["name"] > b["name"]) {
       return 1;
     }
-    
+
     return 0;
   }
-  
-  // onMount(shuffle(assets));
-  onMount(assets.sort(compare));
 
+  onMount(assets.sort(compare));
 </script>
 
 <svelte:head>
@@ -64,33 +63,36 @@
 
 <main>
   <div
-    class="w-screen min-h-screen bg-cover bg-center z-0 animate__animated animate__fadeIn bg-gradient-to-r from-orange-300 to-rawblue"
+    class="w-screen min-h-screen bg-cover bg-center z-0 animate__animated animate__fadeIn bg-gradient-to-r from-lime-200 to-green-900"
     style=""
   >
     <div class="w-full bg-black/50 min-h-screen h-fit overflow-hidden">
       <!-- LOGO -->
       <div class="h-[10vh] my-[2vh]">
-        <a href="/"><img src="/fp-logo-reversed.svg" alt="" class="h-full m-auto hover:animate-pulse" /></a>
+        <a href="/"
+          ><img src="/fp-logo-reversed.svg" alt="" class="h-full m-auto hover:animate-pulse" /></a
+        >
       </div>
       <!-- GALLERY -->
       <div class="h-fit my-[2vh] w-[90%] mx-auto p-4 bg-black/60 rounded-3xl">
         <div class="text-center mt-4 mb-6"><h1>the Fingerprints collection</h1></div>
-        <!-- <div class="text-center mb-4 md:mb-6"><p>curated by the RAW community</p></div> -->
-        <div class="grid grid-cols-1 md:grid-cols-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5">
           {#await assets}
             <p>...loading gallery</p>
           {:then assets}
             {#each assets as asset}
-              {#if !excludedNFTs.includes(asset["name"])}
-              <a href={asset["permalink"]}>
-              <div class="h-fit w-[90%] my-4 mx-auto md:my-6 md:w-[85%]">
+              {#if !(excludedNFTs.includes(asset["name"]) || excludedNFTs.includes(asset["collection"]["name"]))}
+                <a href={asset["permalink"]}>
+                  <div class="h-fit w-[90%] my-4 mx-auto md:my-6 md:w-[85%]">
                     <img
-                      class="rounded-lg object-cover h-96 w-full"
+                      class="rounded-lg object-cover h-72 w-full"
                       src={asset["image_url"]}
                       alt=""
                     />
                     <div class="w-full h-fit m-2 text-left capitalize"><p>{asset["name"]}</p></div>
-                    <div class="w-full h-fit m-2 text-left text-xs italic capitalize"><p>{asset['collection']["name"]}</p></div>
+                    <div class="w-full h-fit m-2 text-left text-xs italic capitalize">
+                      <p>{asset["collection"]["name"]}</p>
+                    </div>
                   </div>
                 </a>
               {/if}
