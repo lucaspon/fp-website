@@ -5,6 +5,8 @@
 
   export let assets;
   let excludedNFTs = [
+    "Alphabetty Doodle Coll",
+    "Avid Lines",
     "fingerprints.eth",
     "Gutter Punks Flyer - Meebits",
     "CRAYON CLUB X BAYC",
@@ -18,6 +20,9 @@
     "Voxels (formerly Cryptovoxels)",
     "Temple",
     "Gallery Premium Membership Cards",
+    "seoulstarsnft #133",
+    "Within/Without",
+    "Uninterested Unicorn #2",
   ];
 
   function compare(a, b) {
@@ -63,7 +68,7 @@
 
 <main>
   <div
-    class="w-screen min-h-screen bg-cover bg-center z-0 animate__animated animate__fadeIn bg-gradient-to-r from-lime-200 to-green-900"
+    class="w-full min-h-screen bg-cover bg-center z-0 animate__animated animate__fadeIn bg-gradient-to-r from-lime-200 to-green-900"
     style=""
   >
     <div class="w-full bg-black/50 min-h-screen h-fit overflow-hidden">
