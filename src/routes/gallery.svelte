@@ -23,6 +23,7 @@
     "seoulstarsnft #133",
     "Within/Without",
     "Uninterested Unicorn #2",
+    "Handsom Acade",
   ];
 
   function compare(a, b) {
@@ -81,25 +82,26 @@
       <!-- GALLERY -->
       <div class="h-fit my-[2vh] w-[90%] mx-auto p-4 bg-black/60 rounded-3xl">
         <div class="text-center mt-4 mb-6"><h1>the Fingerprints collection</h1></div>
-        <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5">
+        <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6">
           {#await assets}
             <p>...loading gallery</p>
           {:then assets}
             {#each assets as asset}
               {#if !(excludedNFTs.includes(asset["name"]) || excludedNFTs.includes(asset["collection"]["name"]))}
-                <a href={asset["permalink"]}>
-                  <div class="h-fit w-[90%] my-4 mx-auto md:my-6 md:w-[85%]">
-                    <img
-                      class="rounded-lg object-cover h-72 w-full"
+                
+                  <div class="m-4">
+                    <a href={asset["permalink"]}>
+                      <img
+                      class="rounded-lg object-contain h-72 w-72"
                       src={asset["image_url"]}
                       alt=""
-                    />
-                    <div class="w-full h-fit m-2 text-left capitalize"><p>{asset["name"]}</p></div>
-                    <div class="w-full h-fit m-2 text-left text-xs italic capitalize">
+                      />
+                    </a>
+                    <div class="m-2 text-left capitalize"><p>{asset["name"]}</p></div>
+                    <div class="m-2 text-left text-xs italic capitalize">
                       <p>{asset["collection"]["name"]}</p>
                     </div>
                   </div>
-                </a>
               {/if}
             {/each}
           {:catch error}
