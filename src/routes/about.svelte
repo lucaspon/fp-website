@@ -34,7 +34,7 @@
 
 <main>
   <div
-    class="w-screen min-h-screen bg-cover bg-center animate__animated animate__fadeIn overflow-hidden"
+    class="w-full min-h-screen bg-cover bg-center animate__animated animate__fadeIn overflow-hidden"
     style="background-image: url({bg});"
   >
     <div class="bg-black/50 min-h-screen h-fit overflow-hidden">
@@ -48,9 +48,11 @@
       >
         <h1 class="mb-3">What is Fingerprints?</h1>
         <p class="mb-10">
-          Fingerprints is a decentralized autonomous organization (DAO) established in the Ethereum
-          mainnet with the purpose of pioneering ways to curate, collect and further blockchain art.<br
-          /><br />
+          Fingerprints is a global community that champions blockchain art. <br> <br>
+          We collect artworks that explore the creative possibilities of blockchain and commission new projects by leading digital artists. <br><br>
+          Founded in 2021, the <a href="/gallery" class="text-rawblue">Fingerprints Collection</a> includes canonical blockchain artworks by Larva Labs, Rhea Myers, Mitchell F Chan, Sarah Meyohas, and more.
+          Many of these artists are members of our community.<br><br>
+          We are passionate about supporting artists, fostering experimentation, and educating the world about this emerging field of artistic practice and the technology that underpins it.
         </p>
         <h1 class="mb-3">What are $PRINTS tokens?</h1>
         <p class="mb-10">
@@ -63,10 +65,7 @@
         <h1 class="mb-3">What are the perks of Fingerprints membership?</h1>
         <p class="mb-10">
           Fingerprints members gain exclusive access to our private discord channels, where they can
-          mingle with our collected artists and other cool members.<br /><br />
-          <br />
-          You also become eligible to work for the DAO and earn ETH and special roles within the community
-          (<a href="#" class="text-rawblue">learn more</a>).<br /><br />
+          mingle with our collected artists and other cool members. <br><br>
           Members will also gain priority access in future drops, events and projects premiered by RAW.<br
           /><br />
           We're constantly working to expand the perks of Fingerprints membership, so there's a lot more
@@ -74,16 +73,64 @@
         </p>
 
         <h1 class="mb-3">How does Fingerprints' curation system work?</h1>
-        <p class="mb-5">[TBD]</p>
-
-        <h1 class="mb-3">How do I become a member?</h1>
-        <p class="">
-          Just follow the instructions in our <a href="/join" class="text-rawblue">join page</a>.
-        </p>
-      </div>
-
-      <!-- back button -->
-      <div class="w-full h-[4vh] my-[6vh] text-xl text-center">
+        <p class="mb-5">The Curation Committee, elected by the Fingerprints community, oversees all acquisitions.<br><br>
+          Artworks are assessed by the Committee according to a framework composed of four categories. The work must respond to at least one of them in either form or concept: </p>
+          <table class="border border-gray-300 border-separate mb-10">
+            <tr class="border border-gray-400">
+              <th class="border border-gray-400">
+                Category
+              </th>
+              <th class="border border-gray-400">
+                Description
+              </th>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-1">
+                On-chain storage
+              </td>
+              <td class="border border-gray-400 p-1">
+                The artwork can be recreated from information stored on the blockchain
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-1">
+                Dynamism
+              </td>
+              <td class="border border-gray-400 p-1">
+                The artwork is responsive to on-chain activity, such as block time or oracles
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-1">
+                Coordination-based
+              </td>
+              <td class="border border-gray-400 p-1">
+                The artwork incentivizes coordinated behavior by human or non-human agents
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-gray-400 p-1">
+                Value and ownership
+              </td>
+              <td class="border border-gray-400 p-1">
+                The artwork critically examines financial value, markets, and/or ownership, or deploys its own economic mechanisms
+              </td>
+            </tr>
+          </table>
+          <p class="mb-5">The Curation Committee, elected by the Fingerprints community, oversees all acquisitions.<br><br>
+            This framework reflects our belief that art is essential for helping us understand blockchain’s growing importance in the world. <br><br>
+            Explore the Fingerprints Collection <a href="/gallery" class="text-rawblue">here</a>.
+          </p>
+          
+          
+          <h1 class="mb-3">How do I become a member?</h1>
+          <p class="">
+            Just follow the instructions in our <a href="/join" class="text-rawblue">join page</a>.
+          </p>
+        </div>
+        
+        <!-- back button -->
+        <div class="w-full h-[4vh] my-[6vh] text-xl text-center">
         <a href="/" class="">← back</a>
       </div>
     </div>
